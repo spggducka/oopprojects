@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.quanlycuahangbanh.Controller">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <AnchorPane fx:id="si_loginForm" layoutX="300.0" prefHeight="400.0" prefWidth="300.0" styleClass="Xanhnhat" stylesheets="@loginDesign.css">
+               <children>
+                  <Label layoutX="57.0" layoutY="68.0" styleClass="header-label" stylesheets="@loginDesign.css" text="Đăng Nhập">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="si_username" layoutX="57.0" layoutY="153.0" prefHeight="25.0" prefWidth="207.0" promptText="Username" stylesheets="@loginDesign.css">
+                     <styleClass>
+                        <String fx:value="textfield" />
+                        <String fx:value="list-cell" />
+                     </styleClass></TextField>
+                  <Button fx:id="si_loginBtn" layoutX="54.0" layoutY="265.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="207.0" styleClass="login-register-button" stylesheets="@loginDesign.css" text="Đăng Nhập">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Button>
+                  <Hyperlink fx:id="si_forgot" layoutX="57.0" layoutY="234.0" text="Quên Mật Khẩu?" />
+                  <PasswordField fx:id="si_password" layoutX="57.0" layoutY="197.0" prefHeight="26.0" prefWidth="207.0" promptText="Password" stylesheets="@loginDesign.css">
+                     <styleClass>
+                        <String fx:value="textfield" />
+                        <String fx:value="list-cell" />
+                     </styleClass></PasswordField>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="su_signupForm" layoutY="-1.0" prefHeight="400.0" prefWidth="300.0" styleClass="Xanhnhat" stylesheets="@loginDesign.css">
+               <children>
+                  <Label layoutX="57.0" layoutY="48.0" styleClass="header-label" stylesheets="@loginDesign.css" text="Đăng Ký" textFill="#0ba425">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="su_username" layoutX="57.0" layoutY="109.0" prefHeight="25.0" prefWidth="207.0" promptText="Username" stylesheets="@loginDesign.css">
+                     <styleClass>
+                        <String fx:value="textfield" />
+                        <String fx:value="list-cell" />
+                     </styleClass></TextField>
+                  <Button fx:id="su_signupBtn" layoutX="54.0" layoutY="315.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="207.0" styleClass="login-register-button" stylesheets="@loginDesign.css" text="Đăng Ký">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Button>
+                  <PasswordField fx:id="su_password" layoutX="57.0" layoutY="159.0" prefHeight="26.0" prefWidth="207.0" promptText="Password" stylesheets="@loginDesign.css">
+                     <styleClass>
+                        <String fx:value="textfield" />
+                        <String fx:value="list-cell" />
+                     </styleClass></PasswordField>
+                  <ComboBox fx:id="su_question" layoutX="52.0" layoutY="207.0" prefWidth="207.0" promptText="Question" styleClass="combo-box" stylesheets="@loginDesign.css" />
+                  <TextField fx:id="su_answer" layoutX="55.0" layoutY="265.0" prefHeight="25.0" prefWidth="207.0" promptText="Answer" stylesheets="@loginDesign.css">
+                     <styleClass>
+                        <String fx:value="textfield" />
+                        <String fx:value="list-cell" />
+                     </styleClass></TextField>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="side_form" prefHeight="405.0" prefWidth="300.0" styleClass="gradient" stylesheets="@loginDesign.css">
+               <children>
+                  <Label fx:id="side_taotk" layoutX="82.0" layoutY="294.0" styleClass="create-account-label" stylesheets="@loginDesign.css" text="Tạo Tài Khoản" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="side_createAccount" layoutX="47.0" layoutY="333.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="40.0" prefWidth="207.0" styleClass="create-btn" stylesheets="@loginDesign.css" text="Tạo Tài Khoản Mới">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="side_signBtn" layoutX="47.0" layoutY="333.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="40.0" prefWidth="207.0" styleClass="create-btn" stylesheets="@loginDesign.css" text="Đăng Nhập" visible="false">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="side_alreadyLabel" layoutX="54.0" layoutY="294.0" styleClass="create-account-label" stylesheets="@loginDesign.css" text="Bạn đã có tài khoản?" visible="false" />
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="97.0" layoutY="48.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@pngegg.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="101.0" layoutY="203.0" styleClass="create-account-label" stylesheets="@loginDesign.css" text="Cat Bakery" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
