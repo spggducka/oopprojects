@@ -1,4 +1,4 @@
-package com.example.quanlycuahangbanh;
+package com.example.squanlycuahangbanh;
 
 import javafx.application.Application;
 import javafx.stage.Stage;
@@ -16,6 +16,9 @@ public class QuanLyCuaHangBanh extends Application {
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("/quanlycuahangbanh/QuanLyCuaHang.fxml"));
         Scene scene = new Scene(root);
+        stage.setTitle("Quan Ly Tiem Banh");
+        stage.setMinHeight(410);
+        stage.setMinWidth(610);
         stage.setScene(scene);
         stage.show();
     }
